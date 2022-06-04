@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtost</title>
+</head>
+<body>
+    <button onclick="load()">Consulte o produto</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Nº</th>
+                <th>Descrição</th>
+                <th>Qtd. Estoque</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody id="resultado">
+            
+        </tbody>
+    </table>
+
+    <script>
+        function load(){
+            fetch("http://localhost:3000/produtos")
+                .then(tabela => tabela.json())
+                .then(dados => mostrarTabela(dados))
+        }
+
+        function mostrarTabela(tabela){
+            var linhas = ""
+            for (let i=0; i < tabela.length; i++) {
+                linhas += `
+                <tr><td>${tabela[i].id}</td>
+                <td>${tabela[i].descricao}</td>
+                <td>${tabela[i].quantidadeEstoque}</td>
+                <td>${tabela[i].preco}</td>
+                </tr>
+                `
+            } document.getElementById("resultado").innerHTML = linhas
+        }
+    </script>
+</body>
+</html>

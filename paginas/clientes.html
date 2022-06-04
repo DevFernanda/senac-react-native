@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+</head>
+<body>
+    <button onclick="show()">Consultar</button>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Nº</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>CPF</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody id="resultado">
+
+        </tbody>
+    </table>
+    <script>
+        function show(){
+            fetch("http://localhost:3000/clientes")
+            .then(promessa1 => promessa1.json())
+            .then(dados => verTabela(dados))
+        }
+
+        function verTabela (tabela) {
+            var linhas = ""
+            for (let i=0; i < tabela.length; i++){
+                linhas += `
+                <tr><td>${tabela[i].id}</td>
+                <td>${tabela[i].nome}</td>
+                <td>${tabela[i].telefone}</td>
+                <td>${tabela[i].cpf}</td>
+                <td>${tabela[i].email}</td>
+                </tr>
+                `
+            } document.getElementById("resultado").innerHTML = linhas
+        }
+    </script>
+</body>
+</html>
