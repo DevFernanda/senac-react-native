@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Informe o nome">
+        <label for="telefone">Telefone</label>
+        <input type="text" id="fone" placeholder="Informe o telefone">
+        <label for="CPF">CPF</label>
+        <input type="text" id="cpf" placeholder="Informe o CPF">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Informe o e-mail">
+    </div>
+    <div>
+        <button onclick="cadastro()">Salvar</button>
+        <button onclick="cancelar()">Cancelar</button>
+    </div>
+
+    <script>
+        function cadastro(){       
+        const clientes = {
+                "nome": "",
+                "telefone": "",
+                "cpf": "",
+                "email": ""
+            }
+        clientes.nome = document.getElementById("nome").value
+        clientes.telefone = document.getElementById("fone").value
+        clientes.cpf = document.getElementById("cpf").value
+        clientes.email = document.getElementById("email").value
+        console.log(cadastro);
+        const options = {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(clientes)
+        }
+        fetch ("http://localhost:3000/clientes", options)
+        .then (data => data.json())
+        .then (dados => console.log(dados))
+        }
+    </script>
+</body>
+</html>

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes</title>
 </head>
+
 <body>
     <button onclick="show()">Consultar</button>
     <hr>
@@ -23,15 +25,15 @@
         </tbody>
     </table>
     <script>
-        function show(){
+        function show() {
             fetch("http://localhost:3000/clientes")
-            .then(promessa1 => promessa1.json())
-            .then(dados => verTabela(dados))
+                .then(promessa1 => promessa1.json())
+                .then(dados => verTabela(dados))
         }
 
-        function verTabela (tabela) {
+        function verTabela(tabela) {
             var linhas = ""
-            for (let i=0; i < tabela.length; i++){
+            for (let i = 0; i < tabela.length; i++) {
                 linhas += `
                 <tr><td>${tabela[i].id}</td>
                 <td>${tabela[i].nome}</td>
@@ -44,4 +46,5 @@
         }
     </script>
 </body>
+
 </html>
