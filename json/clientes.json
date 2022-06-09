@@ -1,25 +1,25 @@
 {
   "clientes": [
     {
-      "id": 1,
-      "nome": "André Augusto de Souza Azeredo",
-      "telefone": "47 9 9230 1202",
-      "cpf": 12345678900,
-      "email": "andre.azeredo@gmail.com"
+      "nome": "Fernanda Mattiello Azeredo",
+      "telefone": "789456",
+      "cpf": "10384895980",
+      "email": "mattiello.fer@gmail.com",
+      "id": 1
     },
     {
-      "id": 2,
-      "nome": "Fernanda Mattiello",
+      "nome": "André Augusto",
       "telefone": "47 9 99744 5125",
-      "cpf": 12345678901,
-      "email": "fernanda.mattiello@gmail.com"
+      "cpf": "12345678901",
+      "email": "fernanda.mattiello@gmail.com",
+      "id": 2
     },
     {
-      "id": 3,
-      "nome": "Ana Cristina de Souza",
+      "nome": "Ana Cristina Souza",
       "telefone": "47 9 8235 1409",
-      "cpf": 12345678902,
-      "email": "anasouza@gmail.com"
+      "cpf": "12345678902",
+      "email": "anasouza@gmail.com",
+      "id": 3
     },
     {
       "id": 4,
@@ -36,18 +36,25 @@
       "email": "lucasa@gmail.com"
     },
     {
-      "nome": "Fernanda",
+      "nome": "Joana Luiza",
       "telefone": "1489450940",
       "cpf": "10384895980",
-      "email": "annalfajd@sddada",
+      "email": "joana@gmail.com",
       "id": 6
     },
     {
-      "nome": "Fernanda",
+      "nome": "Maria Annita",
       "telefone": "1489450940",
       "cpf": "10384895980",
-      "email": "annalfajd@sddada",
+      "email": "maria@maria.com",
       "id": 7
+    },
+    {
+      "nome": "Fernanda",
+      "telefone": "174920",
+      "cpf": "103848",
+      "email": "asdasd",
+      "id": 8
     }
   ],
   "produtos": [
