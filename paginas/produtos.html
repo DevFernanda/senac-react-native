@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <button onclick="load()">Consulte o produto</button>
+    <button onclick="load()">Consultar produtos</button>
     <table>
         <thead>
             <tr>
@@ -20,7 +21,7 @@
             
         </tbody>
     </table>
-
+    
     <script>
         function load(){
             fetch("http://localhost:3000/produtos")
